@@ -53,7 +53,9 @@ Here are some details about my setup:
 
    <details open>
    <summary><strong>Config and Binaries</strong></summary>
+  
     > Please enable toolkit.legacyUserProfileCustomizations.stylesheets on "about:config"
+  
    ```sh
     $ mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
     $ mkdir -p $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/ && cp -r ./chrome/* $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/
