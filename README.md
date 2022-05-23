@@ -83,3 +83,14 @@ Here are some details about my setup:
 
    - **Icon Theme <kbd>Suggested</kbd>**
       > You can install [this](https://github.com/vinceliuice/WhiteSur-icon-theme.git) icon theme that suits the GTK theme.
+
+
+## Acknowledgements.
+
+   - **Thanks to**
+      - [ranmaru22](ttps://github.com/ranmaru22) for tabs on Firefox.
+      - [ lr-tech ](https://github.com/lr-tech) for rofi themes.
+      - All people who I stole their wallpaper fron unsplash UnU.
+
+   <br>
+
