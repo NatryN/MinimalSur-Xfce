@@ -41,8 +41,9 @@ Here are some details about my setup:
     xfce4-docklike-plugin
      
    ```
+  </details>
   
-     <br>
+   <br>
 
    > You will need to install a few fonts.(I can't upload all fonts, but it's in a Drive)
 
@@ -61,3 +62,14 @@ Here are some details about my setup:
    ```
 
    </details>
+   
+    <br>
+
+   > Once finished copying the files, you might want to finalize the changes to your system.
+
+   ```sh
+    # Reboot your system to aply vala-panel works
+    $ reboot
+   ```
+
+   <br>
