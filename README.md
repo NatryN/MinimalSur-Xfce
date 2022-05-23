@@ -54,7 +54,7 @@ Here are some details about my setup:
    <details open>
    <summary><strong>Config and Binaries</strong></summary>
   
-    > Please enable toolkit.legacyUserProfileCustomizations.stylesheets on "about:config"
+   > Please enable toolkit.legacyUserProfileCustomizations.stylesheets on "about:config"
   
    ```sh
     $ mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
