@@ -51,7 +51,7 @@ Here are some details about my setup:
 
    <br>
 
-     <details open>
+   <details open>
    <summary><strong>Config and Binaries</strong></summary>
 
    ```sh
