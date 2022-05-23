@@ -63,7 +63,7 @@ Here are some details about my setup:
 
    </details>
    
-    <br>
+   <br>
 
    > Once finished copying the files, you might want to finalize the changes to your system.
 
