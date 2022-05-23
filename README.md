@@ -24,4 +24,21 @@ Here are some details about my setup:
    - **File Manager:**         [thunar](https://github.com/xfce-mirror/thunar)
    - **Application Launcher:** [rofi](https://github.com/davatorium/rofi)
 
----
+### Installation (Manual)
+
+   > After cloning the repository, install the necessary dependencies to replicate by setup.
+
+   <details open>
+   <summary><strong>Arch Linux (and Arch-based distributions)</strong></summary>
+
+   > Assuming your **AUR Helper** is [yay](https://github.com/Jguer/yay).
+
+   ```sh
+    $ yay -S bspwm sxhkd rofi kitty picom-ibhagwan-git calcurse todotxt \
+    feh jq dunst betterlockscreen brightnessctl playerctl maim \
+    xclip imagemagick vala-panel-appmenu-common-git vala-panel-appmenu-xfce-git vala-panel-appmenu-valapanel-git \
+    vala-panel-appmenu-registrar-git libdbusmenu-glib libdbusmenu-gtk3 libdbusmenu-gtk2 appmenu-qt4 \
+    xfce4-docklike-plugin
+     
+   ```
+
