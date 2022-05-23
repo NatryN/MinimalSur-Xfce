@@ -88,9 +88,23 @@ Here are some details about my setup:
 ## Acknowledgements.
 
    - **Thanks to**
-      - [ranmaru22](ttps://github.com/ranmaru22) for tabs on Firefox.
+      - [ranmaru22](https://github.com/ranmaru22) for tabs on Firefox.
       - [ lr-tech ](https://github.com/lr-tech) for rofi themes.
       - All people who I stole their wallpaper fron unsplash UnU.
 
    <br>
+   
+ ## Help Us
+ 
+  Invite me a coffee :3
+
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/panaderoxis)
+
+  My YT channel UwU
+
+[![](https://raw.githubusercontent.com/VaughnValle/demo/master/yt-badge.png)](https://www.youtube.com/channel/UC8FF0V99oxY0k_im1-_Tyvg)
+
+  OwO
+
+[![](https://c5.patreon.com/external/logo/become_a_patron_button.png)](https://www.patreon.com/natry_nenvf)
 
