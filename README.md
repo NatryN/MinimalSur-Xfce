@@ -53,7 +53,7 @@ Here are some details about my setup:
 
    <details open>
    <summary><strong>Config and Binaries</strong></summary>
-
+    > Please enable toolkit.legacyUserProfileCustomizations.stylesheets on "about:config"
    ```sh
     $ mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
     $ mkdir -p $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/ && cp -r ./chrome/* $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/
@@ -73,3 +73,11 @@ Here are some details about my setup:
    ```
 
    <br>
+
+## Miscellaneous.
+
+   - **GTK Theme**
+      > You can find TokyoNight GTK theme [here].
+
+   - **Icon Theme <kbd>Suggested</kbd>**
+      > You can install [this](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) icon theme that suits the GTK theme.
