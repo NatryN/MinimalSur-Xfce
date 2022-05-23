@@ -79,7 +79,7 @@ Here are some details about my setup:
 ## Miscellaneous.
 
    - **GTK Theme**
-      > You can find TokyoNight GTK theme [here](https://github.com/vinceliuice/WhiteSur-gtk-theme.git).
+      > You can find WhiteSur GTK theme [here](https://github.com/vinceliuice/WhiteSur-gtk-theme.git).
 
    - **Icon Theme <kbd>Suggested</kbd>**
       > You can install [this](https://github.com/vinceliuice/WhiteSur-icon-theme.git) icon theme that suits the GTK theme.
