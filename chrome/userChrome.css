@@ -1,0 +1,546 @@
+/* Linux & macOS specific styles */
+@media (-moz-gtk-csd-available), (-moz-mac-big-sur-theme: 0), (-moz-mac-big-sur-theme: 1) {
+    #TabsToolbar:not([customizing="true"]) {
+          visibility: collapse !important;
+      }
+
+    #toolbar-menubar {
+          padding-top: 0px !important;
+      }
+
+    #TabsToolbar:not([customizing="true"]) {
+          visibility: collapse !important;
+      }
+
+    #toolbar-menubar {
+          padding-top: 0px !important;
+      }
+
+    #nav-bar {
+          padding-left: 80px;
+      }
+
+    #TabsToolbar .titlebar-buttonbox-container {
+          visibility: visible !important;
+          position: absolute;
+          top: 12px;
+          left: 0px;
+      }
+
+    .titlebar-buttonbox-container {
+          display: block;
+      }
+
+    .titlebar-button > .toolbarbutton-icon {
+          height: 13x !important;
+          min-height: 13px !important;
+          width: 13px !important;
+          min-width: 13px !important;
+      }
+
+    .titlebar-button {
+          padding-left: 6px !important;
+          padding-right: 6px !important;
+          padding-top: 6px !important;
+      }
+
+    .titlebar-placeholder[type="pre-tabs"] {
+          width: 120px !important;
+      }
+
+    .titlebar-buttonbox-container {
+          -moz-box-ordinal-group: 0;
+      }
+}
+
+
+/* Windows specific styles */
+@media (-moz-platform: windows-win10) {
+    /* Hide main tabs toolbar */
+    :root[tabsintitlebar]{
+          --uc-window-control-width: 138px; /* Space at the right of nav-bar for window controls */
+          /* --uc-window-drag-space-width: 24px; */  /* To add extra window drag space in nav-bar */
+      }
+
+    #nav-bar{
+          border-inline: var(--uc-window-drag-space-width,0px) solid var(--toolbar-bgcolor) ;
+          border-inline-style: solid !important;
+          border-right-width: calc(var(--uc-window-control-width,0px) + var(--uc-window-drag-space-width,0px));
+
+          padding-top: 0px !important;
+          margin-left: -80px; /* Removes the space left when hiding .titlebar-buttonbox-container */
+      }
+
+    :root {
+          --uc-toolbar-height: 32px;
+          --chrome-content-separator-color: none !important;
+      }
+
+    :root:not([uidensity="compact"]) {
+          --uc-toolbar-height: 38px;
+      }
+
+    #TabsToolbar {
+          visibility: collapse !important;
+      }
+    /* Hide the Windows controls on the left side. */
+    #TabsToolbar .titlebar-buttonbox-container {
+          visibility: hidden !important;
+      }
+    /* Line up the Windows controls with the rest of the icons in the toolbar. */
+    .titlebar-buttonbox-container {
+          margin-top: 7px;
+      }
+    :root:not([inFullscreen]) #nav-bar {
+          margin-top: calc(0px - var(--uc-toolbar-height));
+      }
+
+    #toolbar-menubar {
+          min-height: unset !important;
+          height: var(--uc-toolbar-height) !important;
+          position: relative;
+      }
+
+    #main-menubar {
+          -moz-box-flex: 1;
+          background-color: var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor);
+          background-clip: padding-box;
+          border-right: 30px solid transparent;
+          border-image: linear-gradient(to left, transparent, var(--toolbar-bgcolor,--toolbar-non-lwt-bgcolor) 30px) 20 / 30px;
+      }
+
+    #toolbar-menubar:not([inactive]) {
+          z-index: 2;
+      }
+
+    #toolbar-menubar[inactive] > #menubar-items {
+          opacity: 0;
+          pointer-events: none;
+          margin-left: var(--uc-window-drag-space-width,0px);
+      }
+
+    :root[inFullscreen] #nav-bar {
+          border-inline: none !important;
+      }
+}
+
+
+/* General styles */
+#browser {
+    position: relative;
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"] {
+    z-index: 1;
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"] #sidebar-header {
+    visibility: collapse;
+    display: none;
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) {
+    display: block;
+    position: absolute;
+    min-width: 48px;
+    max-width: 48px;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    border-right: 1px solid var(--sidebar-border-color);
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar,
+#sidebar-box[sidebarcommand*="tabcenter"]:hover {
+    min-width: 10vw !important;
+    width: 30vw !important;
+    max-width: 200px !important;
+    z-index: 10 !important;
+}
+
+@media (width >= 1200px) {
+    [sidebarcommand*="tabcenter"] #sidebar,
+    #sidebar-box[sidebarcommand*="tabcenter"]:hover {
+        max-width: 250px !important;
+    }
+}
+
+[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
+    display: none;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar {
+    max-height: 100%;
+    height: 100%;
+}
+
+#sidebar-box[sidebarcommand*="tabcenter"]:not([hidden]) ~ #appcontent {
+    margin-left: 48px;
+}
+
+#main-window[inFullscreen][inDOMFullscreen] #appcontent {
+    margin-left: 0;
+}
+
+#main-window[inFullscreen] #sidebar {
+    height: 100vh;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar-header {
+    background: #0C0C0D;
+    border-bottom: none !important;
+}
+
+[sidebarcommand*="tabcenter"] ~ #sidebar-splitter {
+    border-right-color: #0C0C0D !important;
+    border-left-color: #0C0C0D !important;
+}
+
+[sidebarcommand*="tabcenter"] #sidebar-switcher-target,
+[sidebarcommand*="tabcenter"] #sidebar-close {
+    filter: invert(100%);
+}
+
+@media (max-width: 630px) {
+    #urlbar-container {
+        min-width: 100% !important;
+    }
+    #menubar-items {
+        display: none !important;
+    }
+}
+
+/* Popup menus and context menus */
+
+@import "popups-contents.css";
+@namespace xul "http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul";
+
+/* Style menus */
+menupopup {
+	--panel-background: var(--gnome-menu-background) !important;
+	--panel-border-color: var(--gnome-menu-border-color) !important;
+	--arrowpanel-border-radius: 12px !important;
+	--arrowpanel-background: var(--gnome-menu-background) !important;
+	--arrowpanel-border-color: var(--gnome-menu-border-color) !important;
+	--panel-border-radius: 8px !important;
+	--panel-padding: 8px 0 !important;
+}
+
+#PlacesToolbar menupopup[placespopup="true"]::part(content), #PlacesToolbar menupopup[placespopup="true"]::part(arrowscrollbox), #PlacesToolbar menupopup {
+	background: none !important;
+	padding: 3px 4px 6px !important;
+	margin: 0 0 0 -12px !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+menubar > menu > menupopup {
+	border-top-left-radius: 0 !important;
+	border-top-right-radius: 0 !important;
+}
+
+menuitem, menupopup menu {
+	-moz-appearance: none !important;
+	padding: 4px 8px !important;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+menuitem[type="checkbox"] image, menuitem[type="radio"] image {
+	visibility: visible !important;
+}
+
+menuitem[disabled="true"]:hover, menupopup menu[disabled="true"]:hover {
+	background: transparent !important;
+}
+
+panel {
+	--panel-background: var(--gnome-menu-background) !important;
+	--panel-border-color: var(--gnome-menu-border-color) !important;
+}
+
+:is(menupopup, panel)[type="arrow"] {
+	--panel-border-radius: 12px !important;
+	--panel-padding: 8px !important;
+}
+
+:is(panel, menupopup)::part(content) {
+	border: none !important;
+}
+
+/* Adjust popovers position */
+panel[type="arrow"] {
+	appearance: none !important;
+	border: none !important;
+	background-color: transparent !important;
+	margin-top: 8px !important;
+}
+
+/* Style popovers */
+.panel-arrowcontent .panel-arrowcontent,
+.panel-header, .PanelUI-subView,
+.panel-subview-body, #widget-overflow-mainView, #protections-popup-footer,
+panelview {
+	border: none !important;
+	background: none !important;
+}
+
+panelview {
+	padding: 8px !important;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+	border-radius: 12px !important;
+}
+
+.panel-arrowcontent {
+	background: var(--gnome-popover-background) !important;
+	border: 1px solid var(--gnome-popover-border-color) !important;
+	border-radius: 12px !important;
+	color: var(--gnome-toolbar-color) !important;
+}
+
+#BMB_bookmarksPopup {
+	margin-top: 4px !important;
+	padding: 0 !important;
+	box-shadow: none !important;
+	--panel-padding: 0 !important;
+}
+
+#BMB_bookmarksPopup menupopup {
+	padding: 6px !important;
+}
+
+panel:not([remote]), #BMB_bookmarksPopup {
+	--arrowpanel-background: var(--gnome-popover-background) !important;
+}
+
+.PanelUI-subView toolbarseparator:not([orient="vertical"]) {
+	margin: 10px 2px !important;
+}
+
+.panel-header {
+	padding: 0 0 10px 0 !important;
+}
+.panel-header + toolbarseparator,
+#identity-popup-mainView-panel-header + toolbarseparator,
+#permission-popup-mainView-panel-header + toolbarseparator,
+#protections-popup-mainView-panel-header-section + toolbarseparator {
+	display: none !important;
+}
+.panel-footer {
+	background-color: transparent !important;
+	display: flex;
+	justify-content: flex-end;
+	padding-top: 0px !important;
+}
+.panel-footer.panel-footer-menulike {
+	border-top: 0 !important;
+	margin-top: 8px !important;
+}
+.panel-footer toolbarseparator {
+	display: none !important;
+}
+.proton-zap {
+	border-image: unset !important;
+}
+.panel-subview-body {
+	padding: 0 !important;
+}
+.panel-subview-footer {
+	margin-top: 10px !important;
+}
+
+/* Style popovers menu buttons */
+.subviewbutton:not(.subviewbutton-back),
+.toolbarbutton-1, .protections-popup-category,
+.identity-popup-content-blocking-category {
+	border-radius: 8px !important;
+	color: var(--gnome-toolbar-color) !important;
+	font: menu !important;
+}
+.subviewbutton:not(.subviewbutton-back),
+.protections-popup-category,
+.identity-popup-content-blocking-category {
+	padding: 5px !important;
+	margin: 0 !important;
+}
+
+.subviewbutton[disabled], .toolbarbutton-1[disabled],
+.protections-popup-category[disabled],
+.identity-popup-content-blocking-category[disabled] {
+	opacity: 0.5 !important;
+	color: var(--gnome-inactive-toolbar-color) !important;
+	background: none !important;
+}
+
+.subviewbutton[shortcut]:after {
+	opacity: 0.5 !important;
+}
+
+.subviewbutton:not([disabled]):hover, .toolbarbutton-1:not([disabled]):hover, .protections-popup-category:not([disabled]):hover,
+.identity-popup-content-blocking-category:not([disabled]):hover {
+	background-color: var(--gnome-popover-button-hover-background) !important;
+}
+
+/* Style popover separators */
+toolbarseparator, menuseparator {
+	border-color: var(--gnome-popover-separator-color) !important;
+}
+toolbarseparator:not([orient="vertical"]) {
+	margin: 8px 0 !important;
+}
+toolbarseparator[orient="vertical"] {
+	margin: 0 3px !important;
+}
+
+/* Auto complete popups */
+panel[type="autocomplete-richlistbox"] {
+	background: var(--gnome-menu-background) !important;
+	border: 1px solid var(--gnome-menu-border-color) !important;
+	padding: 4px 0 !important;
+	color: var(--gnome-toolbar-color) !important;
+}
+.autocomplete-richlistbox {
+	margin: 0 !important;
+}
+
+.autocomplete-richlistitem:not([type="loginsFooter"]) {
+	color: var(--gnome-toolbar-color) !important;
+	font: menu !important;
+	margin: 0 !important;
+}
+.autocomplete-richlistitem:not([type="loginsFooter"]) .ac-site-icon {
+	fill: var(--gnome-toolbar-color) !important;
+	opacity: 0.5;
+}
+.autocomplete-richlistitem:not([type="loginsFooter"]):hover {
+	color: #fff !important;
+	background-color: Highlight !important;
+}
+.autocomplete-richlistitem:not([type="loginsFooter"]):hover .ac-site-icon {
+	fill: #fff !important;
+}
+
+.PanelUI-subView .subviewbutton-nav::after {
+	content: "" !important;
+	background: url("../icons/pan-start-symbolic.svg");
+	background-size: contain;
+	height: 16px;
+	width: 16px;
+	margin-top: -2px !important;
+}
+.protections-popup-category::after {
+	content: url("../icons/pan-start-symbolic.svg") !important;
+}
+.identity-popup-content-blocking-category::after {
+	content: url("../icons/pan-start-symbolic.svg") !important;
+}
+#identity-popup-security-expander .button-icon {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
+
+/* Popovers subview back button */
+.subviewbutton-back {
+	list-style-image: url("../icons/pan-start-symbolic.svg") !important;
+}
+
+/* Sub menu arrow */
+.menu-right {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/pan-end-symbolic.svg") !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+menu[disabled] > .menu-right {
+	opacity: 0.3;
+}
+menu:not([disabled]):hover > .menu-right {
+	filter: invert(100%) brightness(200%);
+}
+
+/* Arrow down buttons */
+.expander-down > .button-box,
+#sidebar-switcher-arrow,
+#viewButton .button-menu-dropmarker {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/pan-down-symbolic.svg") !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+.menulist-label-box:after {
+	content: url("../icons/pan-down-symbolic.svg") !important;
+}
+
+/* Arrow up buttons */
+.expander-up > .button-box {
+	-moz-appearance: none !important;
+	list-style-image: url("../icons/pan-up-symbolic.svg") !important;
+	width: 16px !important;
+	height: 16px !important;
+}
+
+/* Popovers subview menu arrow */
+.PanelUI-subView .subviewbutton-nav::after {
+	content: "" !important;
+	filter: var(--gnome-icons-hack-filter);
+	background: url("moz-icon://stock/pan-start-symbolic?size=dialog");
+	background-size: contain;
+	height: 16px;
+	width: 16px;
+	margin-top: -2px !important;
+}
+
+/* Popovers subview back button */
+.subviewbutton-back {
+	list-style-image: url("moz-icon://stock/pan-start-symbolic?size=dialog") !important;
+}
+.subviewbutton-back .toolbarbutton-icon {
+	filter: var(--gnome-icons-hack-filter);
+}
+
+urlbarView {
+	background-color: var(--lwt-toolbar-field-background-color, hsla(0,0%,100%,.8));`
+
+	backdrop-filter: blur(5px);
+}
+
+#identity-icon-label {
+	display: none !important;
+}
+
+/*Command + L on Mac to focus on address bar*/
+#nav-bar {
+  /* customize this value. */
+  --navbar-margin: -44px;
+
+  margin-top: var(--navbar-margin);
+  margin-bottom: 0;
+  z-index: -100;
+  transition: all 0.3s ease !important;
+  opacity: 0;
+}
+
+#navigator-toolbox:focus-within > #nav-bar,
+#navigator-toolbox:hover > #nav-bar
+{
+  margin-top: 0;
+  margin-bottom: var(--navbar-margin);
+  z-index: 100;
+  opacity: 1;
+}
+
+/*
+ *    Hide Tabs on Topbar
+ */
+
+/* Hide main tabs toolbar */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+    opacity: 0;
+    pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+
