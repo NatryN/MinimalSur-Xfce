@@ -41,4 +41,23 @@ Here are some details about my setup:
     xfce4-docklike-plugin
      
    ```
+  
+     <br>
 
+   > You will need to install a few fonts.(I can't upload all fonts, but it's in a Drive)
+
+   - **Fonts:** [here](https://drive.google.com/drive/folders/1MflR6nEbgSnao5DpHo4jXkpqXQBUENuI?usp=sharing)
+
+   <br>
+
+     <details open>
+   <summary><strong>Config and Binaries</strong></summary>
+
+   ```sh
+    $ mkdir -p $HOME/.config/ && cp -r ./config/* $HOME/.config/
+    $ mkdir -p $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/ && cp -r ./chrome/* $HOME/.mozilla/firefox/"yourprofile".default-relase/chrome/
+    $ mkdir -p $HOME/.rofi-themes/ && cp -r ./.rofi-themes/* $HOME/.rofi-themes/
+    $ mkdir -p $HOME/.xfce4-plugins/ && cp -r ./xfce-plugins/* $HOME/.xfce4-plugins/
+   ```
+
+   </details>
